@@ -1,0 +1,15 @@
+{
+  "name": "thermocouple-calibration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "热处理炉热电偶校正联合求解服务",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "verify": "node verify/verify.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

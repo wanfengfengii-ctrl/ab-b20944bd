@@ -1,0 +1,67 @@
+body {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.1rem; margin-bottom: 8px; }
+
+.hint { color: #52606d; line-height: 1.6; }
+
+section {
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+#probe-list .probe-row {
+  display: inline-flex;
+  gap: 8px;
+  margin: 0 8px 8px 0;
+}
+
+input, select {
+  padding: 6px 8px;
+  border: 1px solid #bcccdc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input[type="number"] { width: 90px; }
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #9fb3c8;
+  background: #f0f4f8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #0b5fff;
+  border-color: #0b5fff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 28px;
+}
+
+table { border-collapse: collapse; width: 100%; margin-bottom: 8px; }
+th, td { border: 1px solid #d9e2ec; padding: 6px 8px; text-align: left; }
+th { background: #f0f4f8; }
+
+.ok { color: #0a7d33; }
+.bad { color: #c00; }
+.stale { color: #b7791f; font-weight: 600; }
+
+#result table { margin-top: 8px; }
+code { background: #eef2f7; padding: 1px 5px; border-radius: 3px; }

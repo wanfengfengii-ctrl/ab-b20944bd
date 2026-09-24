@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>热电偶校正联合求解</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>热处理炉热电偶校正联合求解</h1>
+    <p class="hint">
+      录入 3~10 支唯一编号的热电偶、指定基准探头（校正值固定为 0），以及 3~24 条双向比对记录。
+      每条记录 (A, B, [下界, 上界]) 表示：下界 ≤ 校正值(A) − 校正值(B) ≤ 上界（整数闭区间）。
+      全部记录将同时纳入求解，而非逐条独立取中值。
+    </p>
+
+    <form id="calibration-form">
+      <section>
+        <h2>探头列表（3~10 支）</h2>
+        <div id="probe-list"></div>
+        <button type="button" id="add-probe">添加探头</button>
+      </section>
+
+      <section>
+        <h2>基准探头</h2>
+        <select id="reference" required></select>
+      </section>
+
+      <section>
+        <h2>比对记录（3~24 条）</h2>
+        <table id="record-table">
+          <thead>
+            <tr>
+              <th>编号</th><th>探头 A</th><th>探头 B</th>
+              <th>下界</th><th>上界</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="record-list"></tbody>
+        </table>
+        <button type="button" id="add-record">添加记录</button>
+      </section>
+
+      <button type="submit" class="primary">联合求解</button>
+    </form>
+
+    <section id="result" hidden>
+      <h2>求解结果</h2>
+      <div id="result-body"></div>
+    </section>
+    <p id="stale-note" class="stale" hidden>输入已变更，旧结论已撤下，请重新求解。</p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
